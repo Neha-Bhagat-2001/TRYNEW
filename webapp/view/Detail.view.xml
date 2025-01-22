@@ -1,0 +1,57 @@
+<mvc:View xmlns:table="sap.ui.table" controllerName="student00.com.sap.training.ux402.listdetail.ux402listdetail.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" 
+    xmlns:ux="sap.uxap"
+    xmlns:layout="sap.ui.layout">
+    <ux:ObjectPageLayout id="objectPageLayout">
+    <ux:headerTitle>
+    <ux:ObjectPageDynamicHeaderTitle id="objectPageDynamicHeader">
+    <ux:expandedHeading>
+    <Title id="title1" text="{Carrname}" level="H2"></Title>
+    </ux:expandedHeading>
+    </ux:ObjectPageDynamicHeaderTitle>
+    </ux:headerTitle>
+    <ux:headerContent> 
+    <FlexBox id="flexbox" wrap="Wrap">
+    <Avatar id="avatar" src="sap-icon://flight"></Avatar>
+    <layout:VerticalLayout id="	verticallayout1" class="sapUiSmallMarginBeginEnd">
+    <Label id="lable1" text="{carrid}"></Label>
+    <Label id="lable2" text="{Url}"></Label>
+    </layout:VerticalLayout>
+    </FlexBox>
+
+    </ux:headerContent>
+    <ux:sections> 
+    <ux:ObjectPageSection id="objectPageSection">
+    <ux:ObjectPageSubSection id="objectPageSubSection1">
+    <Table id="table" headerText="{i18n>tableHeaderText}" items="{to_Connection}" 
+ noDataText="{i18n>tableNoDataText}">
+ <columns>
+ <Column id="column1">
+ <Text id="text1" text="{i18n>idColumnText}"></Text>	
+<Text id="text2" text="{i18n>cityFromColumnText}"></Text>
+<Text id="text3" text="{i18n>cityToColumnText}"></Text>
+ </Column>
+ <Column id="column2"></Column>
+ <Column id="column3"></Column>
+ </columns>
+ <items>
+ <ColumnListItem id="columnListItem">
+ <cells>
+ <Text id="text4" text="{carrid}"></Text>
+ <Text id="text5" text="{Cityfrom}"></Text>
+ <Text id="text6" text="{Cityto}"></Text>
+ </cells>
+ </ColumnListItem>
+ </items>
+
+</Table>
+    </ux:ObjectPageSubSection>
+    </ux:ObjectPageSection>
+
+    </ux:sections>
+    
+    </ux:ObjectPageLayout>
+
+</mvc:View>
+
